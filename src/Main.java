@@ -60,15 +60,29 @@ public class Main {
 
         System.out.println("Sum : " + (number1 + number2));
         System.out.println("Multiply : " + (number1 * number2));
-        System.out.println("Division " + number1 + " / " + number2 + " = "  + ((double) number1 / (double) number2));
-        System.out.println("Division " + number2 + " / " + number1 + " = "  + ((double) number2 / (double) number1));
+
+        // этот блок выводит результат в формате double (что дает слишком много цифр после точки)
+        //System.out.println("Division " + number1 + " / " + number2 + " = "  + ((double) number1 / (double) number2));
+        //System.out.println("Division " + number2 + " / " + number1 + " = "  + ((double) number2 / (double) number1));
+
+        // а так будет видно всего 2 цифры после точки
+        System.out.print("Division " + number1 + " / " + number2 + " = ");
+        System.out.printf("%.2f", ((double) number1 / (double) number2));
+        System.out.println();
+        System.out.print("Division " + number2 + " / " + number1 + " = ");
+        System.out.printf("%.2f", ((double) number2 / (double) number1));
+        System.out.println();
+
+        // эта логика позволит избежать отрицательных чисел
         if (number1 >= number2) {
             System.out.println("Difference : " + (number1 - number2));
         } else {
             System.out.println("Difference : " + (number2 - number1));
         }
-        System.out.println("Mod division " + number1 + " % " + number2 + " = "  + ( number1 %  number2));
-        System.out.println("Mod division " + number2 + " % " + number1 + " = "  + ( number2 %  number1));
+
+        System.out.println("Mod division " + number1 + " % " + number2 + " = "  + ( number1 % number2));
+        System.out.println("Mod division " + number2 + " % " + number1 + " = "  + ( number2 % number1));
+
         if (number1 == number2) {
             System.out.println(number1 + " equals " + number2);
 
