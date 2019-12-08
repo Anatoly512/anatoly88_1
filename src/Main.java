@@ -7,21 +7,29 @@ public class Main {
         System.out.println();
 
         String name = new String();
-        stringInput();
+        int number = 0;
 
+        System.out.println("What is your name? ");
+        name = stringInput();
+        if (name.equals("A"))  {
+            System.out.println("Hello, " + name);
+        } else{
+            System.out.println("else " + name);
+        }
 
     }
 
-    public static void stringInput () {
+    public static String stringInput () {
+        Scanner input = new Scanner(System.in);
+        String name = input.next();
+        return name;
+    }
 
-            Scanner input = new Scanner(System.in);
-            System.out.println("What is your name? ");
-            String name = input.next();
-            if (name == "A")  {
-                System.out.println("Hello, " + name);
-            } else{
-            System.out.println("else " + name);
-        }
+
+    public static int numberInput () {
+        Scanner in = new Scanner(System.in);
+        int number = in.nextInt();
+        return number;
     }
 
 }
