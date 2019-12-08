@@ -2,11 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String name = new String();
-        int number = 0;
 
         System.out.println("What task do you want to run (1, 2 or 3) ? ");
         choice();
+
     }
 
         public static void choice () {
@@ -160,6 +159,5 @@ public class Main {
 
 }
 
-//  Домашняя работа  задание 1, 2 and 3
-
+//  Домашняя работа 01   задание 1, 2 and 3
 
