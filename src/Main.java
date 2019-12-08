@@ -21,7 +21,7 @@ public class Main {
             if (number == 3) {
                 Task3();
             } else {
-                System.out.println("Please, try again (possible variants: 1, 2 or 3) : ");
+                System.out.println("\nPlease, try again (possible variants: 1, 2 or 3) : ");
                 choice();
             }
 
@@ -29,11 +29,60 @@ public class Main {
 
     public static void Task1 () {
         System.out.println("Как я провел лето");
-        System.out.println("\nЛето было жарким\n\tЛето было очень жарким\n\t\tНо в принципе все было хорошо");
+        System.out.println("\nЛето было жарким\n\tЛето было очень жарким\n\t\tНо в принципе было хорошим");
         System.out.println();
     }
 
     public static void Task2 () {
+
+        String passport1 = "-------------------- PASSPORT ----------------------------";
+        String passport2 = "----------------------------------------------------------";
+        String passport3 = "-----";
+
+        System.out.print("\nPlease, enter your NAME :  ");
+        String name = stringInput();
+
+        System.out.print("\nAnd your SURNAME :  ");
+        String surname = stringInput();
+
+        System.out.print("\nWhat's your AGE :  ");
+        int age = numberInput();
+
+        System.out.print("\nWhat city were you born in :  ");
+        String birthCity = stringInput();
+
+        System.out.print("\nWhat city do you LIVE in :  ");
+        String currentCity = stringInput();
+
+        System.out.print("\nEnter your GENDER (MALE or FEMALE) :  ");
+        String gender = stringInput();
+
+        System.out.println();
+        System.out.println(passport1);
+        System.out.println(passport2);
+        System.out.println(passport3);
+
+
+        // ----- Person: {имя} {фамилия}
+
+        System.out.print(passport3);
+        System.out.println(" Person:  " + name + " " + surname);
+
+
+        // ----- Gender: {пол}, age: {возраст}
+
+        System.out.print(passport3);
+        System.out.println(" Gender:  " + gender + ", age: " + age);
+
+
+        // ----- Location: from - {город рождения}, current - {город проживания}
+
+        System.out.print(passport3);
+        System.out.println(" Location: from - " + birthCity + ", current - " + currentCity);
+
+        System.out.println(passport3);
+        System.out.println(passport2);
+        System.out.println(passport2);
 
     }
 
@@ -41,6 +90,7 @@ public class Main {
         int number1;
         int number2;
 
+        System.out.println();
         System.out.println("Please, enter number1 : ");
         number1 = numberInput();
 
@@ -58,7 +108,7 @@ public class Main {
               >
         */
 
-        System.out.println("Sum : " + (number1 + number2));
+        System.out.println("\nSum : " + (number1 + number2));
         System.out.println("Multiply : " + (number1 * number2));
 
         // этот блок выводит результат в формате double (что дает слишком много цифр после точки)
