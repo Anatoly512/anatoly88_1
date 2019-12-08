@@ -38,7 +38,47 @@ public class Main {
     }
 
     public static void Task3 () {
+        int number1;
+        int number2;
 
+        System.out.println("Please, enter number1 : ");
+        number1 = numberInput();
+
+        System.out.println("Please, enter number2 : ");
+        number2 = numberInput();
+
+        /*
+              сумма
+              умножение
+              деление
+              разница
+              деление по модулю
+              ==
+              <
+              >
+        */
+
+        System.out.println("Sum : " + (number1 + number2));
+        System.out.println("Multiply : " + (number1 * number2));
+        System.out.println("Division " + number1 + " / " + number2 + " = "  + ((double) number1 / (double) number2));
+        System.out.println("Division " + number2 + " / " + number1 + " = "  + ((double) number2 / (double) number1));
+        if (number1 >= number2) {
+            System.out.println("Difference : " + (number1 - number2));
+        } else {
+            System.out.println("Difference : " + (number2 - number1));
+        }
+        System.out.println("Mod division " + number1 + " % " + number2 + " = "  + ( number1 %  number2));
+        System.out.println("Mod division " + number2 + " % " + number1 + " = "  + ( number2 %  number1));
+        if (number1 == number2) {
+            System.out.println(number1 + " equals " + number2);
+
+        } else {
+            if (number1 < number2) {
+                System.out.println(number1 + " < " + number2);
+            } else {
+                System.out.println(number1 + " > " + number2);
+            }
+        }
     }
 
     public static String stringInput () {
